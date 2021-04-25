@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Prefrence Form-AUGSD</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+</head>
+<body>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">AUGSD-BITS Pilani</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="location.reload()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"id="messages_content">Error
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="card m-5">
+  <div class="card-header text-primary font-weight-bold">
+    Dual Degree Prefrence Form - AUGSD BITS Pilani
+  </div>
+    <form  action="" method="POST" id="registrationform" class=" p-5 single-form quate-form wow fadeInUp" data-toggle="validator" novalidate="true">
+      <div class="form-group row ">
+        <label for="" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" placeholder="f201*****@pilani.bits-pilani.ac.in" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">ID </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="id" placeholder="201*********P" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">DoB</label>
+        <div class="col-sm-10">
+          <input type="date" id="dob"class="form-control" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">CGPA </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="cgpa" placeholder="**.**" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Prefrence 1</label>
+        <div class="col-sm-10">
+          <select name="" id="pref_1" class="form-control">
+            <option value="A7">Computer Science (A7)</option>
+            <option value="A3">Electrical and Electronics (A3)</option>
+            <option value="A8">Electrical and Instrumentation (A8)</option>  
+            <option value="AA">Electrical and Communication (AA)</option>  
+            <option value="A4">Mechanical (A4)</option>  
+            <option value="A1">Chemical (A1)</option>    
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Prefrence 2</label>
+        <div class="col-sm-10">
+          <select name="" id="pref_2" class="form-control">
+            <option value="A7">Computer Science (A7)</option>
+            <option value="A3">Electrical and Electronics (A3)</option>
+            <option value="A8">Electrical and Instrumentation (A8)</option>  
+            <option value="AA">Electrical and Communication (AA)</option>  
+            <option value="A4">Mechanical (A4)</option>  
+            <option value="A1">Chemical (A1)</option>    
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Prefrence 3</label>
+        <div class="col-sm-10">
+          <select name="" id="pref_3" class="form-control">
+            <option value="A7">Computer Science (A7)</option>
+            <option value="A3">Electrical and Electronics (A3)</option>
+            <option value="A8">Electrical and Instrumentation (A8)</option>  
+            <option value="AA">Electrical and Communication (AA)</option>  
+            <option value="A4">Mechanical (A4)</option>  
+            <option value="A1">Chemical (A1)</option>    
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Prefrence 4</label>
+        <div class="col-sm-10">
+          <select name="" id="pref_4" class="form-control">
+            <option value="A7">Computer Science (A7)</option>
+            <option value="A3">Electrical and Electronics (A3)</option>
+            <option value="A8">Electrical and Instrumentation (A8)</option>  
+            <option value="AA">Electrical and Communication (AA)</option>  
+            <option value="A4">Mechanical (A4)</option>  
+            <option value="A1">Chemical (A1)</option>    
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Prefrence 5</label>
+        <div class="col-sm-10">
+          <select name="" id="pref_5" class="form-control">
+            <option value="A7">Computer Science (A7)</option>
+            <option value="A3">Electrical and Electronics (A3)</option>
+            <option value="A8">Electrical and Instrumentation (A8)</option>  
+            <option value="AA">Electrical and Communication (AA)</option>  
+            <option value="A4">Mechanical (A4)</option>  
+            <option value="A1">Chemical (A1)</option>    
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Prefrence 6</label>
+        <div class="col-sm-10">
+          <select name="" id="pref_6" class="form-control">
+            <option value="A7">Computer Science (A7)</option>
+            <option value="A3">Electrical and Electronics (A3)</option>
+            <option value="A8">Electrical and Instrumentation (A8)</option>  
+            <option value="AA">Electrical and Communication (AA)</option>  
+            <option value="A4">Mechanical (A4)</option>  
+            <option value="A1">Chemical (A1)</option> 
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Confirm</label>
+        <div class="form-check col-sm-10">
+          <label for="" class="form-check-label">
+            <input type="checkbox" id="confirm" class="form-check-input mr-2"/>I confirm that all  details are checked twice by me
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-sm-2 col-sm-10">
+          <button  class="btn btn-primary" type="submit"  data-toggle="modal" data-target="#exampleModalCenter" id="form-submit">Submit</button>
+        </div>
+      </div>
+  </form>
+</div>
+
+<script>
+const config = {
+  apiKey: "AIzaSyB14FHvcwRy9irfRx1Edm-O4KeaXiKIEh4",
+  authDomain: "form-dual.firebaseapp.com",
+  projectId: "form-dual",
+  storageBucket: "form-dual.appspot.com",
+  messagingSenderId: "262830605545",
+  appId: "1:262830605545:web:b3ea50b7868253c24c1c78",
+  databaseURL: "https://form-dual-default-rtdb.firebaseio.com"
+
+};
+firebase.initializeApp(config);
+let traveldata = firebase.database().ref('dual-allotment');
+document.getElementById('registrationform').addEventListener("submit", formSubmit);
+
+function formSubmit(e) {
+  e.preventDefault();
+  let email = document.querySelector('#email').value;
+  let id = document.querySelector('#id').value;
+  let date = document.querySelector('#dob').value;
+  let cgpa = document.querySelector('#cgpa').value;
+  let pref_1 = document.querySelector('#pref_1').value;
+  let pref_2 = document.querySelector('#pref_2').value;
+  let pref_3 = document.querySelector('#pref_3').value;
+  let pref_4 = document.querySelector('#pref_4').value;
+  let pref_5 = document.querySelector('#pref_5').value;
+  let pref_6 = document.querySelector('#pref_6').value;
+  let confirm = document.querySelector('#confirm').value;
+  let data = {
+      email: String(email),
+      id: String(id),
+      dob : String(date),
+      cgpa: String(cgpa),
+      p1: String(pref_1),
+      p2: String(pref_2),
+      p3: String(pref_3),
+      p4: String(pref_4),
+      p5: String(pref_5),
+      p6: String(pref_6),
+      confirm: String(confirm)
+    }
+  sendMessage(data);
+  document.getElementById('registrationform').reset();
+  console.log(document.querySelector('#id').value);
+}
+function sendMessage(data) {
+  let newFormMessage = traveldata.push();
+  newFormMessage.set(data).then(() => {
+                $('#messages_content').addClass('text-success').html('<p>Well done, Submitted!!</p>');
+                $('#modal').modal('show');
+})
+.catch((error) => {
+                $('#messages_content').addClass('text-danger').html('<p>Error!!</p>');
+                $('#modal').modal('show');
+});
+  console.log(data);
+}
+</script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+
+</body>
+</html>
